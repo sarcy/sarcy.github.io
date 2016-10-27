@@ -4,19 +4,35 @@ html, body, p, div {
 }
 
 html {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 62.5%;
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#dee9fc, #fff 50%, #dee9fc);
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 2rem;
-  /*align-self: center;*/
+  font-size: 1.8rem; /* 18px */
+  color: #3065ba;
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  height: 0.4rem;
+  width: auto;
+  background-color: #3065ba;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+h1:hover:after {
+  opacity: 1;
+  transition: opacity 1s ease-in;
 }
